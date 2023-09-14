@@ -1,5 +1,7 @@
 ---
 # defaults file for new-device
+path_oh_my_zsh: "{{ ansible_user_dir}}/.oh_my_zsh"
+
 packages_tap:
   - homebrew/cask
   - homebrew/cask-fonts

@@ -1,6 +1,9 @@
 ---
 - name: Install requirements
-  ansible.builtin.include_tasks: requirements.yml
+  ansible.builtin.include_tasks: install_requirements.yml
+
+- name: Install oh-my-zsh
+  ansible.builtin.include_tasks: install_oh_my-zsh.yml
 
 - name: Install homebrew
   ansible.builtin.include_tasks: install_brew.yml

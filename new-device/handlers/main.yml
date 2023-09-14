@@ -1,2 +1,4 @@
 ---
 # handlers file for new-device
+- name: Reload profile
+  shell: source /etc/profile

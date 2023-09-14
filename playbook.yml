@@ -1,0 +1,7 @@
+---
+- name: deply to production
+  hosts: localhost
+  tasks:
+    - name: deploy
+      include_role:
+        name: new-device

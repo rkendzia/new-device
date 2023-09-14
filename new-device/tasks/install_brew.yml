@@ -1,12 +1,21 @@
+---
 - name: Install homebrew
   ansible.builtin.shell: |
-    /bin/bash -c "$(curl -fsSL /tmp/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  changed_when: false
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  changed_when: true
+  args:
+    executable: /bin/bash
+
+- name: Install homebrew
+  ansible.builtin.shell: |
+    /bin/bash -c 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+  changed_when: true
   args:
     executable: /bin/bash
 
 - name: Add homebrew to path
   ansible.builtin.lineinfile:
+    become: true
     path: /etc/profile
     line: 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
     state: present

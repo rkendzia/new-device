@@ -6,15 +6,16 @@ packages_tap:
   - homebrew/cask-versions
   - homebrew/core
   - hashicorp/tap
+
 packages:
   - vim
+  - tfenv
   - gcc
   - git
   - python3
   - python
   - hashicorp/tap/terraform
   - hashicorp/tap/packer
-  - tfenv
   - tflint
   - ansible
   - ansible-lint
@@ -22,3 +23,14 @@ packages:
   - jq
   - yamllint
   - shfmt
+
+debian:
+  - procps
+  - curl
+  - git
+
+redhat:
+  - procps-ng
+  - curl
+  - git
+  - gcc

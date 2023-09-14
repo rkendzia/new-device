@@ -1,20 +1,17 @@
 - name: Install homebrew
-  become: yes
-  become_method: sudo
-  shell: |
+  ansible.builtin.shell: |
     /bin/bash -c "$(curl -fsSL /tmp/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  changed_when: false
   args:
     executable: /bin/bash
 
 - name: Add homebrew to path
-  become: yes
-  become_method: sudo
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/profile
     line: 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
     state: present
   args:
-    backup: yes
-    create: yes
+    backup: true
+    create: false
     insertafter: EOF
     regexp: '^eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"$'

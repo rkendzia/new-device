@@ -1,4 +1,6 @@
 galaxy_info:
+  role_name: new_device
+  standalone: true
   author: Logizer
   description: Install required packages for new device
   company: SFEIR
@@ -16,7 +18,7 @@ galaxy_info:
   # - CC-BY-4.0
   license: MIT
 
-  min_ansible_version: 2.1
+  min_ansible_version: "2.1"
 
   # If this a Container Enabled role, provide the minimum Ansible Container version.
   # min_ansible_container_version:

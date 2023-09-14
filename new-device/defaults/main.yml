@@ -8,6 +8,7 @@ packages_tap:
   - hashicorp/tap
 packages:
   - vim
+  - gcc
   - git
   - python3
   - python

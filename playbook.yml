@@ -1,7 +1,5 @@
 ---
-- name: "deply to production"
+- name: "Deply to production"
   hosts: localhost
-  tasks:
-    - name: "deploy"
-      ansible.builtin.include_role:
-        name: new-device
+  roles:
+    - new-device

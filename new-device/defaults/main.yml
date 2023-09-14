@@ -1,0 +1,23 @@
+---
+# defaults file for new-device
+packages_tap:
+  - homebrew/cask
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/core
+  - hashicorp/tap
+packages:
+  - vim
+  - git
+  - python3
+  - python
+  - hashicorp/tap/terraform
+  - hashicorp/tap/packer
+  - tfenv
+  - tflint
+  - ansible
+  - ansible-lint
+  - shellcheck
+  - jq
+  - yamllint
+  - shfmt

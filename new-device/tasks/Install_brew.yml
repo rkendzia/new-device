@@ -1,6 +1,8 @@
 - name: Install homebrew
+  become: yes
+  become_method: sudo
   shell: |
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL /tmp/https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   args:
     executable: /bin/bash
 

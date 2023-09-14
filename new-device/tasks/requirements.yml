@@ -1,0 +1,16 @@
+---
+- name: Install requirements for debian and ubuntu
+  become: true
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ debian }}"
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Install requirements for debian and ubuntu
+  become: true
+  ansible.builtin.dnf:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ redhat }}"
+  when: ansible_facts['os_family'] == "RedHat"

@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
-  remote_user: root
+- name: Test new-device role
+  hosts: all
+  gather_facts: false
   roles:
     - new-device
